@@ -1,9 +1,13 @@
 import './globals.css';
 import '@repo/ui/src/styles.css';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Kulim_Park } from 'next/font/google';
 
-const inter = Inter({ subsets: ['latin'] });
+const kulim = Kulim_Park({
+  weight: ['200', '300', '400', '600', '700'],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+});
 
 export const metadata: Metadata = {
   title: 'Create Turborepo',
@@ -13,7 +17,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }): JSX.Element {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={kulim.className}>{children}</body>
     </html>
   );
 }
